@@ -4,7 +4,7 @@ import Footer from './Footer';
 import VisibleTodoList from './VisibleTodoList';
 
 
-const App = ({ params }) => (
+const App = () => (
   <div>
     <AddTodo />
     <VisibleTodoList />
