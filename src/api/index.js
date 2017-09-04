@@ -1,7 +1,5 @@
 import { v4 } from 'node-uuid';
 
-// This is a fake in-memory implementation of something
-// that would be implemented by calling a REST server.
 
 const fakeDatabase = {
   todos: [{
@@ -24,6 +22,10 @@ const delay = (ms) =>
 
 export const fetchTodos = (filter) =>
   delay(500).then(() => {
+    if (Math.random > 0.5) {
+      throw new Error('Error!');
+    }
+
     switch (filter) {
       case 'all':
         return fakeDatabase.todos;
